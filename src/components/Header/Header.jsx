@@ -4,7 +4,7 @@ import { TbCoin } from "react-icons/tb";
 
 const Header = ({credit}) => {
     return (
-        <div className="flex justify-between items-center my-3">
+        <div className="flex justify-between items-center py-5 sticky top-0 bg-white z-20">
             {/* navbar left starts*/}
             <div className="flex items-center">
                 <div className="dropdown md:hidden">

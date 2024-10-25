@@ -12,7 +12,9 @@ const SelectedPlayer = ({ selectedPlayer, handleUnselect }) => {
             </div>
                 <div>
                     <h4 className='text-lg font-bold'>{selectedPlayer.name}</h4>
-                    <p>{selectedPlayer?.bowl || selectedPlayer.bat}</p>
+                    <p className='text-xs font-semibold'>{selectedPlayer.category}</p>
+                    <p className='text-xs mb-2'>{selectedPlayer?.bowl || selectedPlayer.bat}</p>
+                    <p className='text-xs font-semibold'>Price: {selectedPlayer.price}</p>
                 </div>
             </div>
             <MdOutlineDelete className='text-red-400 text-2xl' onClick={() => handleUnselect(selectedPlayer)}/>
