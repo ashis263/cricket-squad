@@ -33,7 +33,7 @@ const Player = ({ player, handleChoose }) => {
                     <p>{bowl}</p></div>
             }
             <div className='flex justify-between items-center'>
-                <p className='font-semibold'>Price: {price}</p>
+                <p className='font-semibold'>Price: {price}$</p>
                 <div className='p-2 rounded-xl bg-slate-200 cursor-pointer hover:bg-gray-400'>
                     <p onClick={() => handleChoose(player)} className='font-semibold text-xs'>Choose Player</p>
                 </div>

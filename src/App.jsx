@@ -23,9 +23,14 @@ function App() {
     (whatActive === 'available') ? setActive('available') : setActive('selected')
   }
 
-  const handleChoose = name => {
-    const updatedSelected = [...selected, name];
+  const handleChoose = player => {
+    const updatedSelected = [...selected, player];
     setSelected(updatedSelected);
+    if (credit > 0) {
+      const amount = Number(player.price.split('$').join('').split(',').join(''));
+      const updatedCredit = credit - amount;
+      setCredit(updatedCredit);
+    }
   }
 
   const handleUnselect = player => {
@@ -34,7 +39,7 @@ function App() {
   }
 
   const handleCredit = () => {
-    const updatedCredit =  credit + 50000000;
+    const updatedCredit = credit + 50000000;
     setCredit(updatedCredit);
   }
 
