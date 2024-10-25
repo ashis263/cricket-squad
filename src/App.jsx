@@ -3,11 +3,19 @@ import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
 import Selected from './components/Selected/Selected'
 import Players from './components/Players/Players'
-import { useState } from 'react'
+import { useEffect, useState } from "react";
 
 function App() {
 
   const [active, setActive] = useState('available');
+  // const [selected, setSelected] = useState([]);
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+      fetch('players.json')
+          .then(res => res.json())
+          .then(data => setPlayers(data));
+  }, []);
 
   const handleActive = (whatActive) => {
     (whatActive === 'available') ? setActive('available') : setActive('selected')
@@ -26,7 +34,7 @@ function App() {
           </div>
         </div>
         {
-          (active === 'available') ? <Players></Players> : <Selected></Selected>
+          (active === 'available') ? <Players players={players}></Players> : <Selected></Selected>
         }
       </div>
     </div>

@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import Player from "../Player/Player";
 
-const Players = () => {
-    const [players, setPlayers] = useState([]);
-
-    useEffect(() => {
-        fetch('players.json')
-            .then(res => res.json())
-            .then(data => setPlayers(data));
-    }, []);
+const Players = ({players}) => {
     return (
         <div className="mb-52">
             <div className="grid grid-cols-3 gap-3">
@@ -18,6 +11,10 @@ const Players = () => {
             </div>
         </div>
     );
+}
+
+Players.propTypes = {
+    players: PropTypes.array.isRequired
 }
 
 export default Players;
