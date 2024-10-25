@@ -1,0 +1,145 @@
+[
+    {
+        "id": 1,
+        "image": "https://cricketvectors.akamaized.net/players/org/4I.png?impolicy=default_web",
+        "name": "Virat Kohli",
+        "country": "India",
+        "category": "Batsman",
+        "bat": "Right-Handed-Bat",
+        "price": "$12,000,000"
+    },
+    {
+        "id": 2,
+        "image": "https://cricketvectors.akamaized.net/players/org/F2.png?impolicy=default_web",
+        "name": "Babar Azam",
+        "country": "Pakistan",
+        "category": "Batsman",
+        "bat": "Right-Handed-Bat",
+        "price": "$10,000,000"
+    },
+    {
+        "id": 3,
+        "image": "https://cricketvectors.akamaized.net/players/org/AL.png?impolicy=default_web",
+        "name": "Ben Stokes",
+        "country": "England",
+        "category": "All-rounder",
+        "bat": "Left-Handed-Bat",
+        "bowl": "Fast-Bowler",
+        "price": "$15,000,000"
+    },
+    {
+        "id": 4,
+        "image": "https://cricketvectors.akamaized.net/players/org/4O.png?impolicy=default_web",
+        "name": "David Warner",
+        "country": "Australia",
+        "category": "Batsman",
+        "bat": "Left-Handed-Bat",
+        "price": "$11,000,000"
+    },
+    {
+        "id": 5,
+        "image": "https://cricketvectors.akamaized.net/players/org/CE.png?impolicy=default_web",
+        "name": "Rashid Khan",
+        "country": "Afghanistan",
+        "category": "Bowler",
+        "bat": "Right-Handed-Bat",
+        "bowl": "Leg-Spin",
+        "price": "$7,000,000"
+    },
+    {
+        "id": 6,
+        "image": "https://cricketvectors.akamaized.net/players/org/5I.png?impolicy=default_web",
+        "name": "Shakib Al Hasan",
+        "country": "Bangladesh",
+        "category": "All-rounder",
+        "bat": "Left-Handed-Bat",
+        "bowl": "Left-Arm-Spin",
+        "price": "$9,000,000"
+    },
+    {
+        "id": 7,
+        "image": "https://cricketvectors.akamaized.net/players/org/7V.png?impolicy=default_web",
+        "name": "Tamim Iqbal",
+        "country": "Bangladesh",
+        "category": "Batsman",
+        "bat": "Left-Handed-Bat",
+        "price": "$8,000,000"
+    },
+    {
+        "id": 8,
+        "image": "https://cricketvectors.akamaized.net/players/org/B3.png?impolicy=default_web",
+        "name": "Mustafizur Rahman",
+        "country": "Bangladesh",
+        "category": "Bowler",
+        "bat": "Right-Handed-Bat",
+        "bowl": "Left-Arm-Fast",
+        "price": "$6,500,000"
+    },
+    {
+        "id": 9,
+        "image": "https://cricketvectors.akamaized.net/players/org/C3.png?impolicy=default_web",
+        "name": "Hardik Pandya",
+        "country": "India",
+        "category": "All-rounder",
+        "bat": "Right-Handed-Bat",
+        "bowl": "Fast-Bowler",
+        "price": "$8,500,000"
+    },
+    {
+        "id": 10,
+        "image": "https://cricketvectors.akamaized.net/players/org/FJ.png?impolicy=default_web",
+        "name": "Mahmudullah",
+        "country": "Bangladesh",
+        "category": "All-rounder",
+        "bat": "Right-Handed-Bat",
+        "bowl": "Off-Spin",
+        "price": "$7,000,000"
+    },
+    {
+        "id": 11,
+        "image": "https://cricketvectors.akamaized.net/players/org/AJ.png?impolicy=default_web",
+        "name": "Jasprit Bumrah",
+        "country": "India",
+        "category": "Bowler",
+        "bat": "Right-Handed-Bat",
+        "bowl": "Fast-Bowler",
+        "price": "$11,000,000"
+    },
+    {
+        "id": 12,
+        "image": "https://cricketvectors.akamaized.net/players/org/7F.png?impolicy=default_web",
+        "name": "Steven Smith",
+        "country": "Australia",
+        "category": "Batsman",
+        "bat": "Right-Handed-Bat",
+        "price": "$14,000,000"
+    },
+    {
+        "id": 13,
+        "image": "https://cricketvectors.akamaized.net/players/org/EX.png?impolicy=default_web",
+        "name": "Joe Root",
+        "country": "England",
+        "category": "Batsman",
+        "bat": "Right-Handed-Bat",
+        "price": "$9,000,000"
+    },
+    {
+        "id": 14,
+        "image": "https://cricketvectors.akamaized.net/players/org/8C.png?impolicy=default_web",
+        "name": "Kane Williamson",
+        "country": "New Zealand",
+        "category": "Batsman",
+        "bat": "Right-Handed-Bat",
+        "price": "$8,000,000"
+    },
+    {
+        "id": 15,
+        "image": "https://cricketvectors.akamaized.net/players/org/7Q.png?impolicy=default_web",
+        "name": "Glenn Maxwell",
+        "country": "Australia",
+        "category": "All-rounder",
+        "bat": "Right-Handed-Bat",
+        "bowl": "Off-Spin",
+        "price": "$9,500,000"
+    }
+]
