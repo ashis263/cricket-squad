@@ -4,21 +4,32 @@ import Header from './components/Header/Header'
 import Selected from './components/Selected/Selected'
 import Players from './components/Players/Players'
 import { useEffect, useState } from "react";
+import Toggler from './components/Toggler/Toggler'
 
 function App() {
 
   const [active, setActive] = useState('available');
-  // const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState([]);
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-      fetch('players.json')
-          .then(res => res.json())
-          .then(data => setPlayers(data));
+    fetch('players.json')
+      .then(res => res.json())
+      .then(data => setPlayers(data));
   }, []);
 
   const handleActive = (whatActive) => {
     (whatActive === 'available') ? setActive('available') : setActive('selected')
+  }
+
+  const handleChoose = name => {
+    const updatedSelected = [...selected, name];
+    setSelected(updatedSelected);
+  }
+
+  const handleUnselect = player => {
+    const updatedSelected = selected.filter(SelectedPlayer => SelectedPlayer !== player);
+    setSelected(updatedSelected);
   }
 
   return (
@@ -26,15 +37,9 @@ function App() {
       <div className="max-w-screen-xl mx-auto w-4/5">
         <Header></Header>
         <Banner></Banner>
-        <div className="flex justify-between my-5 items-center">
-          <h3 className="text-xl font-semibold">Available Players</h3>
-          <div className="flex rounded-xl border cursor-pointer">
-            <p onClick={() => handleActive('available')} style={{ borderTopLeftRadius: "10px", borderBottomLeftRadius: "10px" }} className={(active === 'available') ? "activeBg font-semibold w-36 px-7 p-2 hover:font-bold" : "w-36 px-7 p-2 hover:font-bold hover:bg-gray-100"}>Available</p>
-            <p onClick={() => handleActive('selected')} style={{ borderTopRightRadius: "10px", borderBottomRightRadius: "10px" }} className={(active === 'selected') ? "activeBg font-semibold w-36 px-7 p-2 hover:font-bold" : "w-36 px-7 p-2 hover:font-bold hover:bg-gray-100"}>Selected(0)</p>
-          </div>
-        </div>
+        <Toggler active={active} handleActive={handleActive} selected={selected} players={players}></Toggler>
         {
-          (active === 'available') ? <Players players={players}></Players> : <Selected></Selected>
+          (active === 'available') ? <Players players={players} handleChoose={handleChoose}></Players> : <Selected selected={selected} handleUnselect={handleUnselect}></Selected>
         }
       </div>
     </div>

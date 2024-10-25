@@ -5,10 +5,10 @@ import { CiFlag1 } from "react-icons/ci";
 
 
 
-const Player = ({ player }) => {
+const Player = ({ player, handleChoose }) => {
     const { image, name, country, category, bat, bowl, price } = player;
     return (
-        <div className='border-2 rounded-xl px-5 pt-0 pb-10 space-y-1'>
+        <div className='border-2 rounded-xl px-5 pt-0 pb-20 space-y-1'>
             <div className='flex flex-col items-center h-[68%] player-bg  rounded-xl pb-5'>
                 <img className='w-3/4 z-0 relative top-[19%]' src={image} alt={name + 'photo'} />
                 <img className='rounded-full w-3/4 relative z-10' src="https://cricketvectors.akamaized.net/jersey/limited/org/29.png?impolicy=default_web" alt="" />
@@ -35,7 +35,7 @@ const Player = ({ player }) => {
             <div className='flex justify-between items-center'>
                 <p className='font-semibold'>Price: {price}</p>
                 <div className='p-2 rounded-xl bg-slate-200 cursor-pointer hover:bg-gray-400'>
-                    <p className='font-semibold text-xs'>Choose Player</p>
+                    <p onClick={() => handleChoose(player)} className='font-semibold text-xs'>Choose Player</p>
                 </div>
             </div>
         </div>
@@ -44,7 +44,8 @@ const Player = ({ player }) => {
 
 
 Player.propTypes = {
-    player: PropTypes.object.isRequired
+    player: PropTypes.object.isRequired,
+    handleChoose: PropTypes.func.isRequired
 };
 
 
