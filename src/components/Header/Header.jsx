@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import { TbCoin } from "react-icons/tb";
 
 
-const Header = () => {
+const Header = ({credit}) => {
     return (
         <div className="flex justify-between items-center my-3">
             {/* navbar left starts*/}
@@ -43,7 +44,7 @@ const Header = () => {
                 </ul>
                 <div className="flex">
                     <div className="text-xs lg:text-sm sm:text-auto flex items-center gap-1 font-semibold p-1 sm:p-2 border rounded-xl">
-                        <p>0 Coin</p>
+                        <p>{credit} Coin</p>
                         <TbCoin className="text-yellow-400 text-lg" />
                     </div>
 
@@ -52,6 +53,10 @@ const Header = () => {
             {/* navbar right ends*/}
         </div>
     )
+}
+
+Header.propTypes = {
+    credit: PropTypes.number.isRequired
 }
 
 export default Header;

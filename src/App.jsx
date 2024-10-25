@@ -11,6 +11,7 @@ function App() {
   const [active, setActive] = useState('available');
   const [selected, setSelected] = useState([]);
   const [players, setPlayers] = useState([]);
+  const [credit, setCredit] = useState(0);
 
   useEffect(() => {
     fetch('players.json')
@@ -32,14 +33,19 @@ function App() {
     setSelected(updatedSelected);
   }
 
+  const handleCredit = () => {
+    const updatedCredit =  credit + 50000000;
+    setCredit(updatedCredit);
+  }
+
   return (
     <div className='sora'>
       <div className="max-w-screen-xl mx-auto w-4/5">
-        <Header></Header>
-        <Banner></Banner>
+        <Header credit={credit}></Header>
+        <Banner handleCredit={handleCredit}></Banner>
         <Toggler active={active} handleActive={handleActive} selected={selected} players={players}></Toggler>
         {
-          (active === 'available') ? <Players players={players} handleChoose={handleChoose}></Players> : <Selected selected={selected} handleUnselect={handleUnselect}></Selected>
+          (active === 'available') ? <Players players={players} handleChoose={handleChoose}></Players> : <Selected selected={selected} handleUnselect={handleUnselect} handleActive={handleActive}></Selected>
         }
       </div>
     </div>
