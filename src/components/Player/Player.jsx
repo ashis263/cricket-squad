@@ -34,7 +34,7 @@ const Player = ({ player }) => {
             }
             <div className='flex justify-between items-center'>
                 <p className='font-semibold'>Price: {price}</p>
-                <div className='p-2 rounded-xl bg-slate-200 cursor-pointer hover:bg-slate-500'>
+                <div className='p-2 rounded-xl bg-slate-200 cursor-pointer hover:bg-gray-400'>
                     <p className='font-semibold text-xs'>Choose Player</p>
                 </div>
             </div>
