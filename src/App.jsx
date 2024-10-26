@@ -105,6 +105,9 @@ function App() {
     });
     const updatedSelected = selected.filter(SelectedPlayer => SelectedPlayer !== player);
     setSelected(updatedSelected);
+    const amount = Number(player.price.split('$').join('').split(',').join(''));
+    const updatedCredit = credit + amount;
+    setCredit(updatedCredit);
   }
 
   const handleCredit = () => {

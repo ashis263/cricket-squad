@@ -21,22 +21,16 @@ const Footer = () => {
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <div>
-                    <form className='flex-1'>
+                    <div className='flex-1 space-y-2'>
                         <h6 className="text-sm sm:text-lg font-bold text-white">Subscribe</h6>
-                        <fieldset className="form-control w-80">
-                            <label className="label">
-                                <span className="">subscribe to our newsletter for latest updates.</span>
-                            </label>
-                            <div className="join">
-                                <input
-                                    type="text"
-                                    placeholder="Enter You Email"
-                                    className="input input-sm input-bordered join-item" />
-                                <button className="join-item bg-gradient-to-r from-sky-300 to-orange-400 w-28 text-black font-semibold">Subscribe</button>
-                            </div>
-                        </fieldset>
-                    </form>
+                        <span className="">Subscribe to our newsletter for latest updates.</span>
+                        <div className="join">
+                            <input id='footer-input'
+                                type="text"
+                                placeholder="Enter You Email"
+                                className="input input-sm input-bordered join-item" />
+                            <button className="join-item bg-gradient-to-r from-sky-300 to-orange-400 w-28 text-black font-semibold">Subscribe</button>
+                        </div>
                     </div>
                 </div>
                 <hr />
