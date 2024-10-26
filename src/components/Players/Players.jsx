@@ -3,7 +3,7 @@ import Player from "../Player/Player";
 
 const Players = ({ players, handleChoose }) => {
     return (
-        <div className="mb-52">
+        <div className="">
             <h3 className="text-xl font-semibold mb-5">Available Players</h3>
             <div className="grid grid-cols-3 gap-3">
                 {

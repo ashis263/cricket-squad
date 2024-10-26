@@ -8,6 +8,7 @@ import Toggler from './components/Toggler/Toggler'
 import { Slide, ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Newsletter from './components/Newsletter/Newsletter'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -131,8 +132,9 @@ function App() {
         {
           (active === 'available') ? <Players players={players} handleChoose={handleChoose}></Players> : <Selected selected={selected} handleUnselect={handleUnselect} handleActive={handleActive}></Selected>
         }
-        <Newsletter></Newsletter> 
+        <Newsletter></Newsletter>
       </div>
+      <Footer className="max-w-screen-xl mx-auto"></Footer>
       <ToastContainer />
     </div>
   )
