@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { TbCoin } from "react-icons/tb";
+import Logo from '../../assets/logo.png'
 
 
 const Header = ({credit}) => {
@@ -31,7 +32,7 @@ const Header = ({credit}) => {
                         <li><a>Schedules</a></li>
                     </ul>
                 </div>
-                <img className="w-7 sm:w-8 md:w-12 lg:w-16" src="/src/assets/logo.png" alt="Logo" />
+                <img className="w-7 sm:w-8 md:w-12 lg:w-16" src={Logo} alt="Logo" />
             </div>
             {/* navbar left ends*/}
             {/* navbar right starts*/}

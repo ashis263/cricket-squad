@@ -28,9 +28,9 @@ const Player = ({ player, handleChoose }) => {
             </div>
             <p className='font-semibold text-lg'>Rating</p>
             {
-                (category === 'Bowler') ? <div className='flex justify-between'><p className='font-semibold'>{bowl}</p><p >{bat}</p>
-                </div> : <div className='flex justify-between'><p className='font-semibold'>{bat}</p>
-                    <p>{bowl}</p></div>
+                (category === 'Batsman') ? <div className='flex justify-between'><p className='font-semibold'>{bat}</p><p >Bowling: N/A</p>
+                </div> : <div className='flex justify-between'><p className='font-semibold'>{bowl}</p>
+                    <p>{bat}</p></div>
             }
             <div className='flex justify-between items-center'>
                 <p className='font-semibold'>Price: {price}</p>

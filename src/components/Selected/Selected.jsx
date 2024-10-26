@@ -4,8 +4,9 @@ import './selected.css';
 
 const Selected = ({ selected, handleUnselect, handleActive }) => {
     return (
-        <div className='mb-52 space-y-10'>
-            <div className='space-y-5 '>
+        <div className='mb-52'>
+            <h3 className="text-xl font-semibold mb-5">Selected Players({selected.length}/6)</h3>
+            <div className='space-y-5 mb-10'>
                 {selected.map(selectedPlayer => <SelectedPlayer key={selectedPlayer.id} selectedPlayer={selectedPlayer} handleUnselect={handleUnselect}></SelectedPlayer>)}
             </div>
             <div className='w-[210px] p-2 rounded-xl border-2 border-gray-200'>
