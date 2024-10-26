@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Toggler from './components/Toggler/Toggler'
 import { Slide, ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Newsletter from './components/Newsletter/Newsletter'
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
   const handleChoose = player => {
     const amount = Number(player.price.split('$').join('').split(',').join(''));
-    if(selected.length<6){
+    if (selected.length < 6) {
       if (credit >= amount) {
         if (!selected.includes(player)) {
           toast.success(`Congrats! ${player.name} have been choosen for Squad.`, {
@@ -72,9 +73,9 @@ function App() {
           progress: undefined,
           theme: "light",
           transition: Slide,
-          });
+        });
       }
-    } else{
+    } else {
       toast.error('Squad is full, cannot choose more player!', {
         position: "top-center",
         autoClose: 2000,
@@ -85,7 +86,7 @@ function App() {
         progress: undefined,
         theme: "light",
         transition: Slide,
-        });
+      });
     }
   }
 
@@ -100,7 +101,7 @@ function App() {
       progress: undefined,
       theme: "light",
       transition: Slide,
-      });
+    });
     const updatedSelected = selected.filter(SelectedPlayer => SelectedPlayer !== player);
     setSelected(updatedSelected);
   }
@@ -116,7 +117,7 @@ function App() {
       progress: undefined,
       theme: "light",
       transition: Slide,
-      });
+    });
     const updatedCredit = credit + 60000000;
     setCredit(updatedCredit);
   }
@@ -130,6 +131,7 @@ function App() {
         {
           (active === 'available') ? <Players players={players} handleChoose={handleChoose}></Players> : <Selected selected={selected} handleUnselect={handleUnselect} handleActive={handleActive}></Selected>
         }
+        <Newsletter></Newsletter> 
       </div>
       <ToastContainer />
     </div>
