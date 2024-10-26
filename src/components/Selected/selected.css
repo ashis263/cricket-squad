@@ -1,4 +1,9 @@
 .add-btn{
-    background-color: rgb(231, 254, 41);
+    background-color: rgb(129, 151, 179);
+    color: white;
     border: none;
+}
+
+.add-btn:hover {
+    color:black;
 }

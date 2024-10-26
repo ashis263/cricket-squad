@@ -22,7 +22,7 @@ const Player = ({ player, handleChoose }) => {
                     <CiFlag1 />
                     <p>{country}</p>
                 </div>
-                <div className='p-2 rounded-xl bg-slate-100'>
+                <div className='p-2 rounded-lg border bg-slate-50'>
                     <p className='font-semibold'>{category}</p>
                 </div>
             </div>
@@ -34,8 +34,8 @@ const Player = ({ player, handleChoose }) => {
             }
             <div className='flex justify-between items-center'>
                 <p className='font-semibold'>Price: {price}</p>
-                <div onClick={() => handleChoose(player)} className='p-2 rounded-xl bg-slate-200 cursor-pointer hover:bg-gray-400'>
-                    <p className='font-semibold text-xs'>Choose Player</p>
+                <div onClick={() => handleChoose(player)} className='p-2 border rounded-lg bg-slate-100 cursor-pointer hover:bg-gray-400'>
+                    <p className='font-semibold'>Choose Player</p>
                 </div>
             </div>
         </div>

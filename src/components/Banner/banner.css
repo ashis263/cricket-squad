@@ -4,10 +4,15 @@
 }
 
 .claim-btn{
-    background-color: rgb(231, 254, 41);
+    background-color: rgb(129, 151, 179);
     border: none;
+    color: white;
+}
+
+.claim-btn:hover{
+    color: black;
 }
 
 .claim-btn-border{
-    border: 1px solid rgb(231, 254, 41);
+    border: 1px solid rgb(129, 151, 179);
 }

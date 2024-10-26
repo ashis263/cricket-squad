@@ -8,7 +8,7 @@ const Newsletter = () => {
                 <p className="text-gray-500">Get the latest updates and news right in your inbox!</p>
                 <div className="flex space-x-2">
                     <input className="input w-[500px] input-bordered" placeholder="Enter your email" />
-                    <button className="btn w-52">Subscribe</button>
+                    <button className="btn bg-gradient-to-r from-sky-300 to-orange-400 w-40">Subscribe</button>
                 </div>
             </div>
         </div>
